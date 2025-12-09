@@ -1,4 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class TomatoPlant implements Produce {
     private boolean hasBeenFertilized = false;
@@ -8,8 +9,8 @@ public class TomatoPlant implements Produce {
     }
 
     @Override
-    public String yield() {
-        return "Tomato";
+    public Edible yield() {
+        return Tomato();
     }
 
     @Override
