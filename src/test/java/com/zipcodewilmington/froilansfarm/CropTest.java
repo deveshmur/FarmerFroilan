@@ -2,6 +2,10 @@ package com.zipcodewilmington.froilansfarm;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CropTest {

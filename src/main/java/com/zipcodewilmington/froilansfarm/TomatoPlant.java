@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+
 public class TomatoPlant implements Produce {
     private boolean hasBeenFertilized = false;
     private boolean hasBeenHarvested = false;

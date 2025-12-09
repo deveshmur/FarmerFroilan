@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-    public class CornStalk implements Produce {
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+
+public class CornStalk implements Produce {
         private boolean hasBeenFertilized = false;
         private boolean hasBeenHarvested = false;
 
