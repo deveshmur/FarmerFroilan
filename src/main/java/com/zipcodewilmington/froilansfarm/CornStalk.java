@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
-    public class CornStalk implements Produce {
+public class CornStalk implements Produce {
         private boolean hasBeenFertilized = false;
         private boolean hasBeenHarvested = false;
 
@@ -8,8 +9,8 @@ package com.zipcodewilmington.froilansfarm;
         }
 
         @Override
-        public String yield() {
-            return "Corn ear";
+        public Edible yield() {
+            return new EarCorn();
         }
 
         @Override 
