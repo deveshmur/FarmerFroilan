@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;;
 
-public class Farmer implements Rider {
+public class Farmer extends Person implements Rider {
     private Rideable currentlyRiding;
 
     @Override
