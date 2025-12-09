@@ -27,7 +27,7 @@ public class BotanistTest {
             @Override
             public void plant(Crop crop, CropRow cropRow) {
                 assertNotNull(crop);
-                assertNotNull(crowRow);
+                assertNotNull(cropRow);
             }
         };
         assertNotNull(testBotanist);
