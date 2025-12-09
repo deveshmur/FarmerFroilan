@@ -8,6 +8,15 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 public class EaterTest {
     static class TestFood implements Edible { }
 
+public class EaterTest {
+    
+    static class TestFood implements Edible {
+        @Override
+        public boolean isEdible() {
+            return true;
+        }
+    }
+    
     static class TestEater implements Eater {
         boolean hasEaten = false;
 
