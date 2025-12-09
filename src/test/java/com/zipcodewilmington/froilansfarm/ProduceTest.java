@@ -1,31 +1,36 @@
 package com.zipcodewilmington.froilansfarm;
-
-import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class ProduceTest {
-
+    
     @Test 
     public void testYield() {
-        Corn corn = new Corn();
-        assertEquals("Corn ears", corn.yield());
+        CornStalk cornStalk = new CornStalk();
+        cornStalk.setHasBeenFertilized(true);
+        cornStalk.setHasBeenHarvested(true);
+        
+        Edible result = cornStalk.yield();
+        assertNotNull(result);
+        assertTrue(result instanceof EarCorn);
     }
-
+    
     @Test
     public void testHasBeenFertilized() {
-        Corn corn = new Corn();
-        assertFalse(corn.hasBeenFertilized());
-
-        corn.fertilize();
-        assertTrue(corn.hasBeenFertilized());
+        CornStalk cornStalk = new CornStalk();
+        assertFalse(cornStalk.hasBeenFertilized());
+        
+        cornStalk.setHasBeenFertilized(true);
+        assertTrue(cornStalk.hasBeenFertilized());
     }
-
+    
     @Test
     public void testHasBeenHarvested() {
-        Corn corn = new Corn();
-        assertFalse(corn.hasBeenHarvested());
-
-        corn.fertilize();
-        assertTrue(corn.hasBeenHarvested());
+        CornStalk cornStalk = new CornStalk();
+        assertFalse(cornStalk.hasBeenHarvested());
+        
+        cornStalk.setHasBeenHarvested(true);
+        assertTrue(cornStalk.hasBeenHarvested());
     }
 }
