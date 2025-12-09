@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface Produce {
-    String yield();
+    Edible yield();
     boolean hasBeenFertilized();
     boolean hasBeenHarvested();
 }
