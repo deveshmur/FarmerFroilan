@@ -17,33 +17,33 @@ public class CornStalkTest {
     public void testYieldReturnsEdible() {
         CornStalk cornStalk = new CornStalk();
         Edible result = cornStalk.yield();
-        assertTrue(result.isEdible());
+        assertTrue(result.getIsEdible());
     }
     
     @Test
     public void testHasBeenFertilizedInitiallyFalse() {
         CornStalk cornStalk = new CornStalk();
-        assertFalse(cornStalk.hasBeenFertilized());
+        assertFalse(cornStalk.getHasBeenFertilized());
     }
     
     @Test
     public void testFertilize() {
         CornStalk cornStalk = new CornStalk();
         cornStalk.fertilize();
-        assertTrue(cornStalk.hasBeenFertilized());
+        assertTrue(cornStalk.getHasBeenFertilized());
     }
     
     @Test
     public void testHasBeenHarvestedInitiallyFalse() {
         CornStalk cornStalk = new CornStalk();
-        assertFalse(cornStalk.hasBeenHarvested());
+        assertFalse(cornStalk.getHasBeenHarvested());
     }
     
     @Test
     public void testHarvest() {
         CornStalk cornStalk = new CornStalk();
         cornStalk.harvest();
-        assertTrue(cornStalk.hasBeenHarvested());
+        assertTrue(cornStalk.getHasBeenHarvested());
     }
     
     @Test
@@ -51,8 +51,8 @@ public class CornStalkTest {
         CornStalk cornStalk = new CornStalk();
         cornStalk.fertilize();
         cornStalk.harvest();
-        assertTrue(cornStalk.hasBeenFertilized());
-        assertTrue(cornStalk.hasBeenHarvested());
+        assertTrue(cornStalk.getHasBeenFertilized());
+        assertTrue(cornStalk.getHasBeenHarvested());
     }
     
     @Test

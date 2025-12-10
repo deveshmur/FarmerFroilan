@@ -1,7 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
-public class TomatoPlant extends Crop {
+public class TomatoPlant extends Crop implements Produce<Tomato>{
     
     public TomatoPlant() {
         super();
@@ -9,7 +10,7 @@ public class TomatoPlant extends Crop {
     
     @Override
     public Edible yield() {
-        if (hasBeenFertilized() && hasBeenHarvested()) {
+        if (getHasBeenFertilized() && !getHasBeenHarvested()) {
             return new Tomato();
         }
         return null;
