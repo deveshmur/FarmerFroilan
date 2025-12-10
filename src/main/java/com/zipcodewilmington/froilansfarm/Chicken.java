@@ -12,6 +12,10 @@ public class Chicken extends Animal implements Produce<Egg> {
         super("Chicken");
     }
 
+    public Chicken(String name) {
+        super(name);
+    }
+
     public boolean getHasBeenFertilized() {
         return hasBeenFertilized;
     }
