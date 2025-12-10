@@ -38,5 +38,7 @@ public class EggTest {
     public void testEggKnowsIfFertilized() {
         Egg unfertilizedEgg = new Egg(false);
         Egg fertilizedEgg = new Egg(true);
+        assertFalse(unfertilizedEgg.isFertilized());
+        assertTrue(fertilizedEgg.isFertilized());
     }
 }
