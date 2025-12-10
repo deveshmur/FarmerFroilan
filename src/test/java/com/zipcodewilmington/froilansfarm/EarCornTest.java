@@ -28,7 +28,7 @@ public class EarCornTest {
 
     @Test
     public void testEarCornIsEdible() {
-        boolean result = earCorn.isEdible();
+        boolean result = earCorn.getIsEdible();
         assertTrue(result);
     }
 }
