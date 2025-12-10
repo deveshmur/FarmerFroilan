@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.Test;
-
-import com.zipcodewilmington.froilansfarm.Interfaces.Vehicle;
+import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.Vehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import static org.junit.jupiter.api.Assertions.*;
