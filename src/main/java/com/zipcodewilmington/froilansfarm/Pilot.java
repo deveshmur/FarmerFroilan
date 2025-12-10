@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 
-public class Pilot  extends Person implements Rider  {
+public class Pilot extends Person implements Rider  {
    
     @Override
     public void mount(Rideable rideable) {
