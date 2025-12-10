@@ -12,6 +12,6 @@ public abstract class Aircraft extends Vehicle {
 
     @Override
     public String makeNoise() {
-        return "Vrooooom (aircraft engine noise)";
+        return "NYOOOOOOOOOOOOOOOOOOOOOOOOMMM";
     }
 }
