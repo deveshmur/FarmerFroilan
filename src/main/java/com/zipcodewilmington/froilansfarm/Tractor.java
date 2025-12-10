@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Interfaces.CropRow;
-import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle; 
+import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+
 
 public class Tractor extends Vehicle implements FarmVehicle {
 
