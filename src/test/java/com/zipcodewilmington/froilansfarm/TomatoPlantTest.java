@@ -1,8 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class TomatoPlantTest {
     
@@ -17,33 +19,33 @@ public class TomatoPlantTest {
     public void testYieldReturnsEdible() {
         TomatoPlant tomatoPlant = new TomatoPlant();
         Edible result = tomatoPlant.yield();
-        assertTrue(result.isEdible());
+        assertTrue(result.getIsEdible());
     }
     
     @Test
     public void testHasBeenFertilizedInitiallyFalse() {
         TomatoPlant tomatoPlant = new TomatoPlant();
-        assertFalse(tomatoPlant.hasBeenFertilized());
+        assertFalse(tomatoPlant.getHasBeenFertilized());
     }
     
     @Test
     public void testFertilize() {
         TomatoPlant tomatoPlant = new TomatoPlant();
         tomatoPlant.fertilize();
-        assertTrue(tomatoPlant.hasBeenFertilized());
+        assertTrue(tomatoPlant.getHasBeenFertilized());
     }
     
     @Test
     public void testHasBeenHarvestedInitiallyFalse() {
         TomatoPlant tomatoPlant = new TomatoPlant();
-        assertFalse(tomatoPlant.hasBeenHarvested());
+        assertFalse(tomatoPlant.getHasBeenHarvested());
     }
     
     @Test
     public void testHarvest() {
         TomatoPlant tomatoPlant = new TomatoPlant();
         tomatoPlant.harvest();
-        assertTrue(tomatoPlant.hasBeenHarvested());
+        assertTrue(tomatoPlant.getHasBeenHarvested());
     }
     
     @Test
@@ -51,12 +53,18 @@ public class TomatoPlantTest {
         TomatoPlant tomatoPlant = new TomatoPlant();
         tomatoPlant.fertilize();
         tomatoPlant.harvest();
-        assertTrue(tomatoPlant.hasBeenFertilized());
-        assertTrue(tomatoPlant.hasBeenHarvested());
+        assertTrue(tomatoPlant.getHasBeenFertilized());
+        assertTrue(tomatoPlant.getHasBeenHarvested());
     }
     
     @Test
-    public void testImplementsProduce() {
+    public void testExtendsCrop() {
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        assertTrue(tomatoPlant instanceof Crop);
+    }
+
+    @Test
+    public void testImplementsProduceThroughCrop() {
         TomatoPlant tomatoPlant = new TomatoPlant();
         assertTrue(tomatoPlant instanceof Produce);
     }

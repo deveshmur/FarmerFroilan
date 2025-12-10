@@ -1,18 +1,13 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
-
-public abstract class Crop implements Produce {
+public abstract class Crop{
     private boolean hasBeenFertilized = false;
-    private boolean hasBeenHarvested;
+    private boolean hasBeenHarvested = false;
 
     public Crop() {
-        this.hasBeenFertilized = false;
-        this.hasBeenHarvested = false;
     }
 
-    public boolean hasBeenFertilized() {
+    public boolean getHasBeenFertilized() {
         return hasBeenFertilized;
     }
 
@@ -20,14 +15,11 @@ public abstract class Crop implements Produce {
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
-    public boolean hasBeenHarvested() {
+    public boolean getHasBeenHarvested() {
         return hasBeenHarvested;
     }
 
     public void setHasBeenHarvested(boolean hasBeenHarvested) {
         this.hasBeenHarvested = hasBeenHarvested;
     }
-
-    @Override
-    public abstract Edible yield();
 }
