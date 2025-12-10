@@ -1,12 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.Horse;
-import com.zipcodewilmington.froilansfarm.Chicken;
-import com.zipcodewilmington.froilansfarm.EarCorn;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AnimalTestSimple {
+public class AnimalTest {
     
     @Test
     public void testHorseName() {
