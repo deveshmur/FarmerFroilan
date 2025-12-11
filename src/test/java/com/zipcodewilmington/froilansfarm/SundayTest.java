@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.CropRow;
 public class SundayTest {
 
     @Test
-    void SundayPlanting() {
+    public void SundayPlanting() {
 
         MorningTest morning = new MorningTest();
         morning.performMorningRoutine();
