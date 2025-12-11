@@ -21,6 +21,10 @@ public class Field {
         this.rows = rows;
     }
 
+    public CropRow getRow(int i) {
+        return rows.get(i);
+    }
+
     public void addRow(CropRow row) {
         rows.add(row);
     }
