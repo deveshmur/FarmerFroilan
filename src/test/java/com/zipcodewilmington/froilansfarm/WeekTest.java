@@ -72,8 +72,14 @@ public class WeekTest {
 
     private void friday() {
         morningRoutine();
-        // Fill out what froilan and froilanda do
+        
+        Tractor tractor = new Tractor();
 
+        CropRow row4= farm.getField().getRows().get(3);
+        CropRow row5 = farm.getField().getRows().get(4);
+        
+        tractor.harvestCropRow(row4);
+        tractor.harvestCropRow(row5);
     }
 
     private void saturday() {
