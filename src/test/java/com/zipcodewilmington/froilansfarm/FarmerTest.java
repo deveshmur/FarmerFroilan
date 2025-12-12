@@ -16,7 +16,7 @@ public class FarmerTest {
     @Test
     public void testFarmerMakesNoise() {
         Farmer froilan = new Farmer("Froilan");
-        assertEquals("Froilan says 'Yee haw!'", froilan.makeNoise());
+        assertEquals("Froilan says 'YAML!'", froilan.makeNoise());
     }
     
     @Test

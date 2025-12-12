@@ -21,7 +21,7 @@ public class PersonTest {
     @Test
     public void testPilotMakesNoise() {
         Pilot froilanda = new Pilot("Froilanda");
-        assertEquals("Takeoff!", froilanda.makeNoise());
+        assertEquals("Froilanda says 'UML!'", froilanda.makeNoise());
     }
     
     @Test
