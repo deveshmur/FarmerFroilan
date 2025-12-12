@@ -25,7 +25,7 @@ public class WeekTest {
     private void initializeFarm() {
         // add five empty rows to field on farm
         for (int i = 0; i < 5; i++) {
-            farm.getField().addRow(null);
+            farm.getField().addRow(new CropRow());
         }
     }
 
