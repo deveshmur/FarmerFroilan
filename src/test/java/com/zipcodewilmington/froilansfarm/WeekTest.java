@@ -1,11 +1,13 @@
 package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.Test;
 import com.zipcodewilmington.froilansfarm.Interfaces.CropRow;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class WeekTest {
     private Farm farm = new Farm();
     private Farmer froilan = (Farmer) farm.getFarmHouse().get(0);
     private Pilot froilanda = (Pilot) farm.getFarmHouse().get(1);
+    private CropDuster cropDuster = new CropDuster();
 
     @Test
     public void simulateWeek() {
@@ -23,7 +25,7 @@ public class WeekTest {
     private void initializeFarm() {
         // add five empty rows to field on farm
         for (int i = 0; i < 5; i++) {
-            farm.getField().addRow(null);
+            farm.getField().addRow(new CropRow());
         }
     }
 
@@ -47,10 +49,28 @@ public class WeekTest {
     }
 
     private void monday() {
-        morningRoutine();
-        // Fill out what froilan and froilanda do
-
+    morningRoutine();
+    
+    froilanda.mount(cropDuster);
+    froilanda.fly(cropDuster);
+    
+    for (int i = 0; i < 3; i++) {
+        for (Crop crop : farm.getField().getRow(i).getCrops()) {
+            crop.setHasBeenFertilized(true);
+        }
     }
+    
+    froilanda.dismount(cropDuster);
+
+    int count = 0;
+    for (int i = 0; i < 3; i++) {
+        for (Crop crop : farm.getField().getRow(i).getCrops()) {
+            if (crop.getHasBeenFertilized()) count++;
+        }
+    }
+    assertEquals(30, count);
+}
+
 
     private void tuesday() {
         morningRoutine();
@@ -90,8 +110,14 @@ public class WeekTest {
 
     private void friday() {
         morningRoutine();
-        // Fill out what froilan and froilanda do
+        
+        Tractor tractor = new Tractor();
 
+        CropRow row4= farm.getField().getRows().get(3);
+        CropRow row5 = farm.getField().getRows().get(4);
+        
+        tractor.harvestCropRow(row4);
+        tractor.harvestCropRow(row5);
     }
 
     private void saturday() {
